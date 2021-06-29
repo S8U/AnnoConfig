@@ -5,12 +5,15 @@ plugins {
 repositories {
     mavenCentral()
 
-    maven { url 'https://jitpack.io' }
+    maven { url = 'https://hub.spigotmc.org/nexus/content/repositories/snapshots/' }
+    maven { url = 'https://jitpack.io' }
 }
 
 dependencies {
     compileOnly group: 'org.projectlombok', name: 'lombok', version: '1.18.20'
     annotationProcessor group: 'org.projectlombok', name: 'lombok', version: '1.18.20'
+
+    compileOnly group: 'org.bukkit', name: 'bukkit', version: '1.15.2-R0.1-SNAPSHOT'
 
     implementation group: 'com.github.s8u', name: 'PlatformConfig', version: '0.0.1'
 }
