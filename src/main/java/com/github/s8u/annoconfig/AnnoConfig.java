@@ -35,7 +35,7 @@ public class AnnoConfig {
 
       Object value = config.get(name);
       if (field.getAnnotation(ConfigDeserialize.class) != null) {
-        value = field.getAnnotation(ConfigDeserialize.class).value().newInstance().deserialize(value);
+        value = field.getAnnotation(ConfigDeserialize.class).value().newInstance().deserialize(value.toString());
       }
 
       if (value != null) {

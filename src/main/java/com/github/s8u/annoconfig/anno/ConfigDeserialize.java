@@ -11,8 +11,8 @@ public @interface ConfigDeserialize {
 
   Class<? extends ConfigDeserializer> value();
 
-  interface ConfigDeserializer {
-    Object deserialize(Object value);
+  interface ConfigDeserializer<T> {
+    T deserialize(String value);
   }
 
 }

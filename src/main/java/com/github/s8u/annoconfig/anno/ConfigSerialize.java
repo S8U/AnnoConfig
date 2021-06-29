@@ -11,8 +11,8 @@ public @interface ConfigSerialize {
 
   Class<? extends ConfigSerializer> value();
 
-  interface ConfigSerializer {
-    Object serialize(Object value);
+  interface ConfigSerializer<T> {
+    String serialize(T value);
   }
 
 }
